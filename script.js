@@ -1,4 +1,6 @@
 const submit = document.querySelector("button");
+const emailPlaceholder = document.getElementById("email-confirmation");
+const enteredEmail = document.getElementById("email");
 
 submit.addEventListener("click", () => {
     if(document.getElementById("email").value == "") {
@@ -13,6 +15,7 @@ submit.addEventListener("click", () => {
         document.getElementById("email").style.border="1px solid hsl(235, 18%, 26%)";
         document.getElementById("popup").style.display="block";
         document.getElementById("container").style.display="none";
+        emailPlaceholder.innerText = enteredEmail.value;
     }
 });
 
